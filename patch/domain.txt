@@ -1,0 +1,26 @@
+# You can add whitelisted domains here.
+2.tlu.dl.delivery.mp.microsoft.com
+3.tlu.dl.delivery.mp.microsoft.com
+ardownload.adobe.com
+ardownload.adobe.com
+armmf.adobe.com
+assets.msn.com
+ccleaner.tools.avcdn.net
+cdn.content.prod.cms.msn.com
+cp601.prod.do.dsp.mp.microsoft.com
+ctldl.windowsupdate.com
+disc601.prod.do.dsp.mp.microsoft.com
+dl.delivery.mp.microsoft.com
+dns.msftncsi.com
+geo.prod.do.dsp.mp.microsoft.com
+geover.prod.do.dsp.mp.microsoft.com
+kv601.prod.do.dsp.mp.microsoft.com
+login.live.com
+MSEDGEWIN10.local
+ncc.avast.com
+tile-service.weather.microsoft.com
+update.libreoffice.org
+v10.events.data.microsoft.com
+windowsupdate.com
+www.bing.com
+www.msftconnecttest.com

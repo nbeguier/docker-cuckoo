@@ -11,9 +11,15 @@ services:
     ports:
         - "2042:2042"
     volumes:
-      - ./cuckoo-tmp/:/tmp/cuckoo-tmp/
-      - /mnt/cuckoo-storage/:/cuckoo/storage/
+      - ./cuckoo-tmp/:/tmp/cuckoo-tmp-cuckoo/
+      - ./cuckoo-storage/:/cuckoo/storage/
       - ./vbox/conf/:/cuckoo/conf/
+      # Patch
+      - ./patch/machine.py:/usr/lib/python2.7/site-packages/remotevbox/machine.py
+      - ./patch/ie.py:/cuckoo/analyzer/windows/modules/packages/ie.py
+      - ./patch/doc.py:/cuckoo/analyzer/windows/modules/packages/doc.py
+      - ./patch/xls.py:/cuckoo/analyzer/windows/modules/packages/xls.py
+      - ./patch/domain.txt:/cuckoo/whitelist/domain.txt
     env_file:
       - ./vbox/config-file.env
 
@@ -32,8 +38,8 @@ services:
       - cuckoo
     command: web
     volumes:
-      - ./cuckoo-tmp/:/tmp/cuckoo-tmp/
-      - /mnt/cuckoo-storage/:/cuckoo/storage/
+      - ./cuckoo-tmp/:/tmp/cuckoo-tmp-cuckoo/
+      - ./cuckoo-storage/:/cuckoo/storage/
       - ./vbox/conf/:/cuckoo/conf/
     env_file:
       - ./vbox/config-file.env
@@ -51,8 +57,8 @@ services:
         - "8000:1337"
     command: api
     volumes:
-      - ./cuckoo-tmp/:/tmp/cuckoo-tmp/
-      - /mnt/cuckoo-storage/:/cuckoo/storage/
+      - ./cuckoo-tmp/:/tmp/cuckoo-tmp-cuckoo/
+      - ./cuckoo-storage/:/cuckoo/storage/
       - ./vbox/conf/:/cuckoo/conf/
     env_file:
       - ./vbox/config-file.env

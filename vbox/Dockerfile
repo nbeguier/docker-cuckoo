@@ -4,7 +4,7 @@ LABEL maintainer "https://github.com/blacktop"
 
 ARG DEFAULT_CUCKOO_UID=1000
 
-ENV CUCKOO_VERSION 2.0.6
+ENV CUCKOO_VERSION 2.0.7
 ENV CUCKOO_CWD /cuckoo
 ENV CUCKOO_PACKAGE_PATH=/usr/lib/python2.7/site-packages/cuckoo
 ENV CUCKOO_FORK_REPO=ilyaglow/cuckoo/remotevbox-machinery
@@ -20,8 +20,8 @@ RUN apk add --update --no-cache tcpdump py-lxml py-chardet py-libvirt py-crypto 
                        libpq \
                        py-pip \
                        shadow \
-  && pip install --upgrade pip wheel \
-  && pip install psycopg2 \
+  && pip --no-cache-dir install --upgrade pip wheel \
+  && pip --no-cache-dir install psycopg2 \
   && apk del --purge postgresql-dev \
                      gcc \
                      g++ \
@@ -66,13 +66,13 @@ RUN apk add --update --no-cache tcpdump py-lxml py-chardet py-libvirt py-crypto 
   && adduser -D -h /cuckoo -u $DEFAULT_CUCKOO_UID cuckoo \
   && export PIP_NO_CACHE_DIR=off \
   && export PIP_DISABLE_PIP_VERSION_CHECK=on \
-  && pip install --upgrade wheel setuptools \
-  && pip install pip==9.0.3 remotevbox \
-  && LDFLAGS=-L/lib pip install cuckoo==$CUCKOO_VERSION \
+  && pip --no-cache-dir install --upgrade wheel setuptools \
+  && pip --no-cache-dir install --upgrade pip remotevbox httpreplay \
+  && LDFLAGS=-L/lib pip --no-cache-dir install cuckoo==$CUCKOO_VERSION \
   && cuckoo \
   && cuckoo community \
   && echo "===> Install additional dependencies..." \
-  && pip install -r /tmp/requirements.txt \
+  && pip  --no-cache-dir install -r /tmp/requirements.txt \
   && echo "===> Clean up unnecessary files..." \
   && rm -rf /tmp/* \
   && apk del --purge .build-deps
