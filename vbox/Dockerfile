@@ -12,7 +12,13 @@ ENV SSDEEP 2.14.1
 
 # Install Cuckoo Sandbox Required Dependencies
 COPY 2.0/requirements.txt /tmp/requirements.txt
-RUN apk add --update --no-cache tcpdump py-lxml py-chardet py-libvirt py-crypto curl \
+RUN apk add --update --no-cache \
+                       tcpdump \
+                       py-lxml \
+                       py-chardet \
+                       py-libvirt \
+                       py-crypto \
+                       curl \
                        postgresql-dev \
                        gcc \
                        g++ \

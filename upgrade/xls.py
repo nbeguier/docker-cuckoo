@@ -1,5 +1,6 @@
 # Copyright (C) 2012-2013 Claudio Guarnieri.
 # Copyright (C) 2014-2017 Cuckoo Foundation.
+# Copyright (C) 2020 Nicolas Beguier.
 # This file is part of Cuckoo Sandbox - http://www.cuckoosandbox.org
 # See the file 'docs/LICENSE' for copying permission.
 
@@ -10,15 +11,15 @@ from lib.common.abstracts import Package
 class XLS(Package):
     """Excel analysis package."""
     PATHS = [
-        # ("ProgramFiles", "Microsoft Office", "EXCEL.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office10", "EXCEL.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office11", "EXCEL.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office12", "EXCEL.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office14", "EXCEL.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office15", "EXCEL.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office16", "EXCEL.EXE"),
-        # ("ProgramFiles", "Microsoft Office 15", "root", "office15", "EXCEL.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "root", "Office16", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office10", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office11", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office12", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office14", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office15", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office16", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office 15", "root", "office15", "EXCEL.EXE"),
+        ("ProgramFiles", "Microsoft Office", "root", "Office16", "EXCEL.EXE"),
         ("ProgramFiles", "LibreOffice", "program", "scalc.exe"),
     ]
 

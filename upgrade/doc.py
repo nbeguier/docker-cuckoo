@@ -1,5 +1,6 @@
 # Copyright (C) 2012-2013 Claudio Guarnieri.
 # Copyright (C) 2014-2017 Cuckoo Foundation.
+# Copyright (C) 2020 Nicolas Beguier.
 # This file is part of Cuckoo Sandbox - http://www.cuckoosandbox.org
 # See the file 'docs/LICENSE' for copying permission.
 
@@ -10,16 +11,16 @@ from lib.common.abstracts import Package
 class DOC(Package):
     """Word analysis package."""
     PATHS = [
-        # ("ProgramFiles", "Microsoft Office", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office10", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office11", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office12", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office14", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office15", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "Office16", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office 15", "root", "office15", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "root", "Office16", "WINWORD.EXE"),
-        # ("ProgramFiles", "Microsoft Office", "WORDVIEW.EXE"),
+        ("ProgramFiles", "Microsoft Office", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office10", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office11", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office12", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office14", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office15", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office", "Office16", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office 15", "root", "office15", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office", "root", "Office16", "WINWORD.EXE"),
+        ("ProgramFiles", "Microsoft Office", "WORDVIEW.EXE"),
         ("ProgramFiles", "LibreOffice", "program", "swriter.exe"),
     ]
 

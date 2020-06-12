@@ -1,3 +1,4 @@
+# Copyright (C) 2020 Nicolas Beguier.
 """
 This module contains two classes:
 * IMachine class represents IMachine object

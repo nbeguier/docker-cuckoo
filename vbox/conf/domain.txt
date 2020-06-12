@@ -2,7 +2,6 @@
 2.tlu.dl.delivery.mp.microsoft.com
 3.tlu.dl.delivery.mp.microsoft.com
 ardownload.adobe.com
-ardownload.adobe.com
 armmf.adobe.com
 assets.msn.com
 ccleaner.tools.avcdn.net
